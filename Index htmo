@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Budget Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Budget Management System</h1>
+
+    <h2>Create Budget</h2>
+    <input type="number" id="budgetInput" placeholder="Enter your total budget">
+    <button onclick="setBudget()">Set Budget</button>
+
+    <h2>Add Expense</h2>
+    <input type="text" id="categoryInput" placeholder="Expense category">
+    <input type="number" id="amountInput" placeholder="Expense amount">
+    <input type="date" id="dateInput">
+    <input type="text" id="descInput" placeholder="Description (optional)">
+    <button onclick="addExpense()">Add Expense</button>
+
+    <h2>Budget Summary</h2>
+    <p>Total Budget: <span id="totalBudget">0</span></p>
+    <p>Total Expenses: <span id="totalExpenses">0</span></p>
+    <p>Remaining Budget: <span id="remainingBudget">0</span></p>
+
+    <h2>Expenses List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="expenseTableBody"></tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
